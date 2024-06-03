@@ -1,5 +1,5 @@
 """
-File containing the ACM Matrices, number of iterations for minimum correlation, 
+keys.py: File containing the ACM Matrices, number of iterations for minimum correlation, 
 and the modified keys used in the datasets for the original encryption scheme
 """
 import numpy as np
