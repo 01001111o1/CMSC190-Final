@@ -25,13 +25,12 @@ Under the subfolder named "Inverted Code" there are the following source files:
 	1. main.py: contains three methods, encrypt, decrypt, and generate_Numerical_Results which are the only methods different from the file with the same name in the main directory
 	2. keys.py: File containing the ACM Matrices, number of iterations for minimum correlation, and the modified keys used in the datasets for the inverted encryption scheme
 
-In main.py, run the following snippet to generate the results
+In main.py, run the following snippet to generate the results:
 
-if __name__ == "__main__":
-    generate_DAA_Dataset()
-    generate_Numerical_Results()
-    decrypt_all()
-    decrypt_all(True)
+	1. generate_DAA_Dataset()
+	2.generate_Numerical_Results()
+	3.decrypt_all()
+	4.decrypt_all(True)
 
 The first method generates a pair of cipher images with which the first one is the encrypted dataset image and the second one is another encrypted image but with the plaintext image being modified by a single pixel
 
