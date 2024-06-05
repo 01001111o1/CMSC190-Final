@@ -4,13 +4,14 @@ Authors: Jehanne Eliza F. Criseno and Sean Thomas C. Vizconde
 
 Adviser: Lee J. Javellana
 
-================================================================================================================================
+======================================================================
 
 A special problem submitted to the Department of Mathematics and Computer Science's  College of Science in The University of the Philippines Baguio, Baguio City
 
-================================================================================================================================
+======================================================================
 
 The project consists of the following source files:
+
 	1. main.py: Main file to run to generate image and numerical results
 	2. ACM_Encryption.py: File to encrypt or decrypt an RGB image using Arnold's Cat Map
 	3. ACM_Generation.py: File to generate a 2x2 Arnold's Cat Map for a given image size N
@@ -51,10 +52,12 @@ Within each sub-folder, the following folders can be found
 	3. ModifiedKey: Set of pictures decrypted using the modified key
 
 
-================================================================================================================================
+======================================================================
+
 Further clarifications and concerns may be directed to the following contacts
 
 1. jfcriseno@up.edu.ph
 2. scvizconde@up.edu.ph
 
-================================================================================================================================
+======================================================================
+
