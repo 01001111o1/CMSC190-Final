@@ -23,7 +23,7 @@ The project consists of the following source files:
 Under the subfolder named "Inverted Code" there are the following source files:
 
 	1. main.py: contains three methods, encrypt, decrypt, and generate_Numerical_Results which are the only methods different from the file with the same name in the main directory
-	3. keys.py: File containing the ACM Matrices, number of iterations for minimum correlation, and the modified keys used in the datasets for the inverted encryption scheme
+	2. keys.py: File containing the ACM Matrices, number of iterations for minimum correlation, and the modified keys used in the datasets for the inverted encryption scheme
 
 In main.py, run the following snippet to generate the results
 
