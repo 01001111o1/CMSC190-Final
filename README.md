@@ -1,8 +1,6 @@
 ENHANCED RGB IMAGE ENCRYPTION: INTEGRATING ARNOLDS CAT MAP AND KNIGHTS TOUR WITH 8-NEIGHBORHOOD ADDITION FOR SECURE IMAGE TRANSMISSION
 
-Authors: 
-1. Jehanne Eliza F. Criseno
-2. Sean Thomas C. Vizconde
+Authors: Jehanne Eliza F. Criseno and Sean Thomas C. Vizconde
 
 Adviser: Lee J. Javellana
 
