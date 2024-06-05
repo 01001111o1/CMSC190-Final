@@ -1,5 +1,5 @@
 """
-KTM_Encryption.py: to encrypt or decrypt an RGB image using Knight's Tour Matrix
+KTM_Encryption.py: File to encrypt or decrypt an RGB image using Knight's Tour Matrix
 """
 import numpy as np
 import cv2

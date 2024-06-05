@@ -1,6 +1,7 @@
 """
 main.py: Main file to run to generate image and numerical results
 """
+import csv
 import os 
 import numpy as np
 import cv2
@@ -8,7 +9,7 @@ from KTM_Encryption import KTM_Encrypt
 from ACM_Encryption import ACM_Encrypt
 from Statistical_Analysis import correlation, split_correlation, compute_entropy, compute_NPCR, compute_UACI
 from keys import ACM_Key, ACM_Key_Modified, iters, new_board
-from PIL.Image import open
+from PIL.Image import open as PIL_open
 import copy
 
 """
@@ -34,7 +35,7 @@ def create_single_DAA(size: str, path: str) -> None:
     cd(res_path)
     name: str = "{name}-{type}.png"
 
-    original: np.ndarray = np.array(open(path))
+    original: np.ndarray = np.array(PIL_open(path))
     modified: np.ndarray = copy.deepcopy(original)
     modified[4, 6] = 255 - modified[4, 6]
     _original_encrypted, _ = encrypt(size, original)
@@ -62,6 +63,7 @@ def generate_DAA_Dataset() -> None:
 Generates the numerical results for every image in all sizes
 """
 def generate_Numerical_Results() -> None:
+    results = []
     for size in sizes:
         path: str = f'Results/{size}/Differential_Attack/'
         titles: list[str] = os.listdir(path)
@@ -76,7 +78,14 @@ def generate_Numerical_Results() -> None:
             h, v, d = split_correlation(original) 
             NPCR: float = compute_NPCR(modified, original)
             UACI: float = compute_UACI(modified, original)
-            print(NPCR)
+            results.append([size, title, NPCR, UACI, _entropy, _correlation, h, v, d])
+
+    with open('original_numerical_results.csv', mode='w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(['Size', 'Title', 'NPCR', 'UACI', 'Entropy', 'Correlation', "H", "V", "D"])
+        writer.writerows(results)
+
+
 """
 Decrypts an RGB image using Knight's Tour Matrix and Arnold's Cat Map
 
@@ -91,7 +100,7 @@ def decrypt(iters: int, size: str,  path: str, modified_key: bool = False) -> No
     title = title.split('-')[0]
     name: str = "{name}-decrypted.png" if not modified_key else "{name}-decrypted-modified-key.png"
 
-    with open(path) as im:
+    with PIL_open(path) as im:
         image: np.ndarray = np.array(im)
         path = name.format(name = title)
         
@@ -137,7 +146,7 @@ def decrypt_all(modified_key: bool = False) -> None:
 
 if __name__ == "__main__":
     #generate_DAA_Dataset()
-    #generate_Numerical_Results()
+    generate_Numerical_Results()
     #decrypt_all()
     #decrypt_all(True)
-    pass
+    
