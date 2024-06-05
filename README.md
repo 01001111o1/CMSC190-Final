@@ -27,10 +27,10 @@ Under the subfolder named "Inverted Code" there are the following source files:
 
 In main.py, run the following snippet to generate the results:
 
-	1. generate_DAA_Dataset()
-	2.generate_Numerical_Results()
-	3.decrypt_all()
-	4.decrypt_all(True)
+	generate_DAA_Dataset()
+	generate_Numerical_Results()
+	decrypt_all()
+	decrypt_all(True)
 
 The first method generates a pair of cipher images with which the first one is the encrypted dataset image and the second one is another encrypted image but with the plaintext image being modified by a single pixel
 
